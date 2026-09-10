@@ -1,4 +1,4 @@
-# Single-channel EEG system using occipital electrodes to detect steady-state visually evoked potentials (SSVEPs)
+# Single-channel occipital EEG for a calculator brain-computer interface (BCI) based on steady-state visual evoked potentials (SSVEP)
 
 ## Required components and downloads
 
