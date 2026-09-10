@@ -12,7 +12,7 @@
 
 # Electrode placement
 
-Electrode placement followed the international 10–20 system, with the recording electrode positioned at O1 or O2 over the occipital region. The approximate electrode locations can be seen in the figure below left (Malmivuo & Plonsey, 1995). The reference electrode was placed over the mastoid process behind the ear. In my setup, adhesive electrodes were easier and more stable to use than dry metal electrodes with conductive gel. Maintaining good skin contact is important, as poor electrode contact can introduce artifacts that may resemble genuine EEG activity and lead to misleading results.
+Electrode placement followed the international 10–20 system, with the recording electrode positioned at O1 or O2 over the occipital region. The approximate electrode locations can be seen in the figure below left (Malmivuo & Plonsey, 1995). The reference electrode was placed over the mastoid process behind the ear. In my setup, adhesive electrodes were easier and more stable to use than dry metal electrodes with conductive gel. 
 
 <img width="500" height="260" alt="Screenshot 2026-09-10 185955" src="https://github.com/user-attachments/assets/46327836-8d41-4668-891e-65516f1de4aa" />
 
