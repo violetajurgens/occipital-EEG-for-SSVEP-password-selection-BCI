@@ -1,4 +1,4 @@
-# Single-channel occipital EEG for a calculator brain-computer interface (BCI) based on steady-state visual evoked potentials (SSVEP)
+# Single-channel occipital EEG for a calculator brain-computer interface (BCI) based on SSVEP
 
 ## Required components and downloads
 
