@@ -16,11 +16,11 @@ Electrode placement followed the international 10–20 system, with the recordin
 
 <img width="500" height="260" alt="Screenshot 2026-09-10 185955" src="https://github.com/user-attachments/assets/46327836-8d41-4668-891e-65516f1de4aa" /> <img width="250" height="260" alt="image" src="https://github.com/user-attachments/assets/9d4c7b41-2dbd-446d-94d0-1484d58bf33b" />
 
-# Stimulus frequency selection
+# Stimulus frequency
 
 Four visual stimulation frequencies (6.67, 7.50, 8.57, and 10.00 Hz) were selected for both calibration and the calculator BCI. Frequency selection was constrained by the 60 Hz monitor refresh rate because conventional frame-based visual stimulation can only generate frequencies corresponding to integer numbers of display frames per stimulation cycle. The selected frequencies correspond to 9, 8, 7, and 6 frames per cycle, respectively. Frequencies in approximately the 6–12 Hz range have also been reported to produce relatively strong SSVEP responses, making them suitable for a low-channel-count EEG system (Hamidi Shishavan et al., 2024).
 
-
+Although the monitor is nominally set to 60 Hz, its measured refresh rate may differ slightly from exactly 60 frames per second. Therefore, the actual stimulation frequency to be used is calculated as the measured refresh rate divided by the number of frames per stimulation cycle, and may differ slightly from the nominal target frequency.
 
 **Reference**
 
