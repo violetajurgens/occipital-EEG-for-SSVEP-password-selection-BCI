@@ -1,0 +1,1 @@
+# single-channel-occipital-EEG-for-SSVEP-detection
