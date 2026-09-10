@@ -8,4 +8,4 @@
 
 * **EEG electrodes**. Gel electrodes positioned over the occipital region. In this project, O1 and O2 are used for the single differential EEG channel.
 
-* **GStreamer**. Required on Windows for Psychtoolbox `Screen()` functionality, which is used in MATLAB to generate the flickering visual SSVEP stimulus.
+* **PsychoPy**. PsychoPy. This is used to generate precisely timed visual stimuli flickering at different frequencies, with each frequency corresponding to a different BCI command. The PsychoPy script also sends stimulus markers through Lab Streaming Layer (LSL), allowing MATLAB to synchronize the EEG with the presented frequencies during calibration and calculator use.
