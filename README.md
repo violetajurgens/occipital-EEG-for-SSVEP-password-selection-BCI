@@ -4,15 +4,11 @@
 
 * **EXG Pill by Upside Down Labs**. An instrumentation amplifier designed for recording small biopotential signals such as EEG, EMG, and ECG.
 
-* **Arduino / Raspberry Pi / compatible microcontroller board**. Used to acquire the analog EEG signal from the EXG Pill and transmit the data to the computer.
-
-* **EEG electrodes**. Adhesive electrodes (or preferably dry metal + conducting gel) electrodes positioned over the occipital region. In this project, O1 and O2 are used for the single differential EEG channel.
-
-* **PsychoPy**. PsychoPy. This is used to generate precisely timed visual stimuli flickering at different frequencies, with each frequency corresponding to a different BCI command. The PsychoPy script also sends stimulus markers through Lab Streaming Layer (LSL), allowing MATLAB to synchronize the EEG with the presented frequencies during calibration and calculator use.
+* **2 x Arduino / Raspberry Pi / compatible microcontroller board**. One board is used to acquire the analog EEG signal from the EXG Pill and transmit the data to the computer. The second board is used to control the LEDs that generate the flickering visual stimuli.
 
 # Electrode placement
 
-Electrode placement followed the international 10–20 system, with the recording electrode positioned at O1 or O2 over the occipital region. The approximate electrode locations can be seen in the figure below left (Malmivuo & Plonsey, 1995). The reference electrode was placed over the mastoid process behind the ear. 
+Electrode placement followed the international 10–20 system, with the recording electrode positioned at O1 or O2 over the occipital region, where the visual processing takes place. The approximate electrode locations can be seen in the figure below left (Malmivuo & Plonsey, 1995). The reference electrode was placed over the mastoid process behind the ear. 
 
 <img width="500" height="260" alt="Screenshot 2026-09-10 185955" src="https://github.com/user-attachments/assets/46327836-8d41-4668-891e-65516f1de4aa" /> <img width="250" height="260" alt="image" src="https://github.com/user-attachments/assets/9d4c7b41-2dbd-446d-94d0-1484d58bf33b" />
 
