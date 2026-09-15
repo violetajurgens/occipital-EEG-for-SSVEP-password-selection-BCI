@@ -4,7 +4,7 @@
 
 * **EXG Pill by Upside Down Labs**. An instrumentation amplifier designed for recording small biopotential signals such as EEG, EMG, and ECG.
 
-* **2 x Arduino / Raspberry Pi / compatible microcontroller board**. One board is used to acquire the analog EEG signal from the EXG Pill and transmit the data to the computer. The second board is used to control the LEDs that generate the flickering visual stimuli.
+* **2x Arduino / Raspberry Pi / compatible microcontroller board**. One board is used to acquire the analog EEG signal from the EXG Pill and transmit the data to the computer. The second board is used to control the LEDs that generate the flickering visual stimuli.
 
 # Electrode placement
 
