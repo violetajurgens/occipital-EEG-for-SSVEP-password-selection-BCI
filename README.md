@@ -24,7 +24,7 @@ Running the stimulus in windowed mode prevented these disconnections, but the fr
 
 <img width="400" height="222" alt="Screenshot 2026-09-15 113300" src="https://github.com/user-attachments/assets/56910dfd-d5b0-4415-847f-8648f976600c" />
 
-Since I did not have access to a second monitor for stimulus presentation, I decided to replace the screen-based stimuli with LEDs controlled by an Arduino. This also removed the limitation of the 60 Hz monitor refresh rate and allowed whole-number stimulation frequencies to be used.
+Using a second computer was not an option because I did not have one available. It would also have required synchronization between the stimulus computer and the EEG-recording computer using LSL markers or hardware triggers. I therefore replaced the screen-based flickering stimulus with Arduino-controlled LEDs, which were used to produce the visual stimulation frequencies for the SSVEP experiment. The Arduino provided more stable timing than the windowed PsychoPy setup and was not limited by the 60 Hz monitor refresh rate, allowing whole-number stimulation frequencies (6, 8, and 10 Hz) to be used. The simple Arduino setup is shown in the upper-right image above, with three LEDs corresponding to three different stimulation frequencies and an OLED display indicating which LED to look at during calibration.
 
 
 **Reference**
