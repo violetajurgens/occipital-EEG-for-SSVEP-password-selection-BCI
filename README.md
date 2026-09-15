@@ -22,6 +22,11 @@ Running the stimulus in windowed mode prevented these disconnections, but the fr
 
 Using a second computer was unnecessarily complicated, as it would also have required synchronization between the stimulus computer and the EEG-recording computer using hardware triggers. I therefore the whole thing with Arduino-controlled LEDs, which were used to produce the visual stimulation frequencies for the SSVEP experiment. The Arduino provided more stable and unproblematic timing and was not limited by the 60 Hz monitor refresh rate, allowing whole-number stimulation frequencies to be used. The very simple Arduino setup is shown in the upper-right image above, with three LEDs corresponding to three different stimulation frequencies (6, 8 and 10 Hz).
 
+## Calibration process and otsustamise design
+
+
+## Real-time control of the calculator BCI
+
 
 **Reference**
 
