@@ -16,11 +16,11 @@ Electrode placement followed the international 10–20 system, with the recordin
 
 <img width="500" height="260" alt="Screenshot 2026-09-10 185955" src="https://github.com/user-attachments/assets/46327836-8d41-4668-891e-65516f1de4aa" /> <img width="250" height="260" alt="image" src="https://github.com/user-attachments/assets/9d4c7b41-2dbd-446d-94d0-1484d58bf33b" />
 
-# Stimulus production
+# SSVEP stimulus generation and timing
 
 Visual stimulation frequencies in approximately the 6–12 Hz range have been reported to produce relatively strong SSVEP responses, making them suitable for a low-channel-count EEG system (Hamidi Shishavan et al., 2024). The initial plan was to generate the flickering stimuli using PsychoPy. Frequencies of 6.67, 7.50, 8.57, and 10 Hz were tested because they correspond to an integer number of frames per cycle on a 60 Hz display (9, 8, 7, and 6 frames per cycle, respectively). In full-screen mode, the stimulus timing was sufficiently accurate; however, opening the full-screen PsychoPy window caused other applications involved in EEG recording, such as LabRecorder and LSL Connector, to lose their connections.
 
-Running the stimulus in windowed mode prevented these disconnections, but the frame timing became unstable, with delays of approximately 10 ms affecting the actual frequencies. One possible solution would have been to use a separate computer for stimulus presentation. Another option considered was to continuously calculate the stimulus phase based on elapsed time and determine the required screen colour from the current phase. However, this would still be limited by the 60 Hz refresh rate. If a required colour transition occurred between two screen refreshes, the change could only be displayed at the next refresh, introducing a delay of up to 16.7 ms. The original PsychoPy stimulus design is shown on the lower left.
+Running the stimulus in windowed mode prevented these disconnections, but the frame timing became unstable, with delays of approximately 10 ms, likely due to increased graphics-processing load. One possible solution would have been to use a separate computer for stimulus generation. Another option considered was to continuously calculate the stimulus phase based on elapsed time and determine the required screen colour from the current phase. However, this would be limited by the 60 Hz refresh rate. If a required colour transition occurred between two screen refreshes, the change could only be displayed at the next refresh, introducing a delay of up to 16.7 ms. The PsychoPy stimulus screen design is shown on the lower left.
 
 <img width="400" height="222" alt="Screenshot 2026-09-15 113300" src="https://github.com/user-attachments/assets/56910dfd-d5b0-4415-847f-8648f976600c" />
 
