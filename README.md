@@ -12,7 +12,7 @@ Electrode placement followed the international 10–20 system, with the recordin
 
 <img width="500" height="260" alt="Screenshot 2026-09-10 185955" src="https://github.com/user-attachments/assets/46327836-8d41-4668-891e-65516f1de4aa" /> <img width="250" height="260" alt="image" src="https://github.com/user-attachments/assets/9d4c7b41-2dbd-446d-94d0-1484d58bf33b" />
 
-# SSVEP stimulus generation and timing
+# Stimulus generation and timing for calibration
 
 Visual stimulation frequencies in approximately the 6–12 Hz range have been reported to produce relatively strong SSVEP responses, making this range suitable for a low-channel-count EEG system (Hamidi Shishavan et al., 2024). Initial testing therefore used frequencies that could be generated from an integer number of display frames on a 60 Hz monitor. Frequencies of 6.67, 7.50, 8.57, 10 and 12 Hz correspond to 9, 8, 7, 6 and 5 frames per flicker cycle, respectively. In the current system, three stimuli are used: 8.57, 10 and 12 Hz. These frequencies gave the highest accuracy for my setup. Their timing is generated directly from the monitor refresh cycle, not from software timers. 
 
