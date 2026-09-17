@@ -1,4 +1,4 @@
-# Single-channel occipital EEG for a calculator BCI based on steady-state visual evoked potentials (SSVEP)
+# Single-channel occipital EEG for a password selection BCI based on steady-state visual evoked potentials (SSVEP)
 
 ## Required components and downloads
 
