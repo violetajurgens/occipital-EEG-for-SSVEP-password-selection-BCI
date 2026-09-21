@@ -12,7 +12,7 @@ Electrode placement followed the international 10–20 system, with the recordin
 
 <img width="500" height="260" alt="Screenshot 2026-09-10 185955" src="https://github.com/user-attachments/assets/46327836-8d41-4668-891e-65516f1de4aa" /> <img width="250" height="260" alt="image" src="https://github.com/user-attachments/assets/9d4c7b41-2dbd-446d-94d0-1484d58bf33b" />
 
-# Stimulus generation and timing for calibration
+# Calibration stimulus generation and timing
 
 Visual stimulation frequencies in approximately the 6–12 Hz range have been reported to produce relatively strong SSVEP responses, making this range suitable for a low-channel-count EEG system (Hamidi Shishavan et al., 2024). Initial testing therefore used frequencies that could be generated from an integer number of display frames on a 60 Hz monitor. Frequencies of 6.67, 7.50, 8.57, 10 and 12 Hz correspond to 9, 8, 7, 6 and 5 frames per flicker cycle, respectively. In the current system, three stimuli are used: 8.57, 10 and 12 Hz. These frequencies gave the highest accuracy for my setup. Their timing is generated directly from the monitor refresh cycle, not from software timers. 
 
@@ -24,7 +24,17 @@ During earlier testing in windowed mode, measured frame intervals were approxima
 
 Stimulus timing markers are tied to actual screen presentation. FLICKER_ON, FLICKER_OFF, and individual flicker-state transitions are scheduled using win.callOnFlip(). Therefore, their timestamps correspond to the screen flip on which the visual change is actually presented rather than to the earlier point in the Python code at which the command was issued. The calibration screen used during the experiment is shown below.
 
-## Real-time control of the calculator BCI
+## SSVEP classifier calibration
+
+Calibration is required because the absolute CCA scores produced by the EEG are specific to the participant, recording conditions, electrode placement, and stimulation frequency. A raw CCA score therefore cannot directly indicate whether a stimulus is being attended. The calibration analysis consists of four stages: EEG preprocessing, CCA feature extraction, classifier calibration, and cross-validation. First, the recorded EEG from the selected occipital channel is **band-pass filtered between 4 and 30 Hz**. For every flicker period, the first 0.25 s after stimulus onset is discarded to avoid including the initial visual transient.
+
+The feature used for classification is the CCA score. For each LEFT, SELECT, or RIGHT flicker period, the corresponding EEG window is compared with synthetic sine and cosine reference signals at the stimulus frequency and its second harmonic. **Canonical Correlation Analysis (CCA)** reduces the EEG window to a single value between 0 and 1 describing how strongly the EEG follows the expected SSVEP pattern. Therefore, each flicker epoch produces one CCA score, and each complete calibration trial produces three CCA scores in total: one for LEFT, one for SELECT, and one for RIGHT.
+
+Classifier then determines what these CCA features look like when each stimulus is attended and when it is unattended. For every stimulus, the program calculates the **mean attended CCA score, mean unattended CCA score, and their pooled standard deviation**. A new CCA score is standardized relative to this model to produce an **attention-evidence score**. This describes whether the measured response is closer to the attended or unattended calibration data. The resulting attention-evidence values are compared, and the command with the largest value is selected as LEFT, SELECT, or RIGHT.
+
+The required EEG window length is determined using leave-one-trial-out cross-validation. Candidate windows of 0.75, 1.00, 1.25, 1.50, and 1.75 s are tested. In each validation step, one trial is excluded, the attended/unattended models are calculated from the remaining trials, and the excluded trial is classified. After every trial has been tested once, the overall classification accuracy is calculated. The shortest window reaching at least 90% accuracy is selected. Finally, the classifier parameters are recalculated using all calibration trials and saved together with the selected window length, stimulation frequencies, filtering parameters, and CCA settings in SSVEP_sequential_classifier_config.json.
+
+## Real-time control of the password selection BCI
 
 
 **Reference**
