@@ -6,6 +6,8 @@
 
 * **2x Arduino / Raspberry Pi / compatible microcontroller board**. One board is used to acquire the analog EEG signal from the EXG Pill and transmit the data to the computer. The second board is used to control the LEDs that generate the flickering visual stimuli.
 
+* **PsychoPy**. Used as the central software environment for the entire SSVEP BCI. It generates the frame-locked visual stimuli, controls the calibration procedure, acquires EEG data through the serial connection, records stimulus and experimental markers, and runs the real-time BCI interface. It is used because it provides precise synchronization with the monitor refresh cycle while also allowing everything else to be handled within a single program.
+
 # Electrode placement
 
 Electrode placement followed the international 10–20 system, with the recording electrode positioned at O1 or O2 over the occipital region, where the visual processing takes place. The approximate electrode locations can be seen in the figure below left (Malmivuo & Plonsey, 1995). The reference electrode was placed over the mastoid process behind the ear. 
