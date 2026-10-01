@@ -10,9 +10,13 @@
 
 # Electrode placement
 
-Electrode placement followed the international 10–20 system, with the recording electrode positioned at O1 or O2 over the occipital region, where the visual processing takes place. The approximate electrode locations can be seen in the figure below left (Malmivuo & Plonsey, 1995). The reference electrode was placed over the mastoid process behind the ear. 
+Initial electrode placement followed the international 10–20 system, with the recording electrode positioned at **O1 or O2** over the occipital region, where visual processing predominantly occurs. The approximate electrode locations are shown in the figure below left (Malmivuo & Plonsey, 1995). The reference electrode was placed over the mastoid process behind the ear. This configuration produced good-quality SSVEP recordings and allowed different stimulation frequencies to be detected with 100% accuracy when each frequency was presented individually.
 
-<img width="500" height="260" alt="Screenshot 2026-09-10 185955" src="https://github.com/user-attachments/assets/46327836-8d41-4668-891e-65516f1de4aa" /> <img width="250" height="260" alt="image" src="https://github.com/user-attachments/assets/9d4c7b41-2dbd-446d-94d0-1484d58bf33b" />
+However, classification performance decreased substantially when several flickering stimuli were displayed simultaneously. Several modifications to the visual stimulus were tested, including reducing the number of stimuli, increasing the distance between them, simplifying the screen layout, and comparing simultaneous stimulation with a more concentrated paradigm in which attention was directed toward one stimulus while the other stimuli continued flickering. Despite these modifications, classification accuracy did not exceed 50%, suggesting that stimulus design alone was not responsible for the poor discrimination.
+
+Electrode placement was therefore reconsidered based on the reduced-channel SSVEP study by Kiser, Cantürk and Volosyak (2026). The authors report that when only a single EEG electrode is used, **Oz provides the highest classification accuracy, followed by O1 and O2**.  Based on these findings, the recording electrode in the present project was moved from O1/O2 to **Oz**, while the remaining two electrodes were positioned over the mastoid regions. **With this modified electrode configuration, the same SSVEP classification system that earlier scored below 50% achieved over 90% accuracy**. This substantial improvement indicated that the recording location was an important limitation of the initial setup.
+
+<img width="500" height="260" alt="Screenshot 2026-09-10 185955" src="https://github.com/user-attachments/assets/46327836-8d41-4668-891e-65516f1de4aa" /> 
 
 # Calibration stimulus generation and timing
 
