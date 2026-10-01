@@ -49,4 +49,6 @@ Leave-one-trial-out cross-validation was used to evaluate classifier performance
 
 Hamidi Shishavan, H., Roy, R., Golzari, K., Singla, A., Zalozhin, D., Lohan, D., Farooq, M., Dede, E. M., & Kim, I. (2024). Optimization of stimulus properties for SSVEP-based BMI system with a heads-up display to control in-vehicle features. *PLOS ONE, 19*(9), e0308506. https://doi.org/10.1371/journal.pone.0308506
 
+Kiser, A., Cantürk, A., & Volosyak, I. (2026). SSVEP-driven BCI authentication with reduced number of EEG electrodes across high and low frequency ranges. Frontiers in Neuroergonomics, 7, 1741655. https://doi.org/10.3389/fnrgo.2026.1741655
+
 Malmivuo, J., & Plonsey, R. (1995). *Bioelectromagnetism: Principles and applications of bioelectric and biomagnetic fields*. Oxford University Press.
