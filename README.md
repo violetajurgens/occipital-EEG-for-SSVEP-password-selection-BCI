@@ -26,6 +26,8 @@ During earlier testing in windowed mode, measured frame intervals were approxima
 
 Stimulus timing markers are tied to actual screen presentation. FLICKER_ON, FLICKER_OFF, and individual flicker-state transitions are scheduled using win.callOnFlip(). Therefore, their timestamps correspond to the screen flip on which the visual change is actually presented rather than to the earlier point in the Python code at which the command was issued. The calibration screen used during the experiment is shown below.
 
+The original serial acquisition code timestamped each EEG packet when it was decoded by Python. Because multiple CHORDS packets could accumulate in the serial buffer and then be decoded in rapid succession, many samples received nearly identical timestamps followed by large time jumps. This caused inaccurate alignment between EEG data and PsychoPy stimulus markers during calibration analysis. The timing was corrected by reconstructing EEG timestamps from the known sampling rate and packet sequence.
+
 ## SSVEP classifier calibration
 
 Calibration is required because the absolute CCA scores produced by the EEG are specific to the participant, recording conditions, electrode placement, and stimulation frequency. A raw CCA score therefore cannot directly indicate whether a stimulus is being attended. The calibration analysis consists of four stages: EEG preprocessing, CCA feature extraction, classifier calibration, and cross-validation. First, the recorded EEG from the selected occipital channel is **band-pass filtered between 4 and 30 Hz**. For every flicker period, the first 0.25 s after stimulus onset is discarded to avoid including the initial visual transient.
