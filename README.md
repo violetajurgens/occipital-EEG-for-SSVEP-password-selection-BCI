@@ -8,7 +8,7 @@
 
 * **PsychoPy**. Used as the central software environment for the entire SSVEP BCI. It generates the frame-locked visual stimuli, controls the calibration procedure, acquires EEG data through the serial connection, records stimulus and experimental markers, and runs the real-time BCI interface. It is used because it provides precise synchronization with the monitor refresh cycle while also allowing everything else to be handled within a single program.
 
-# Electrode placement
+## Electrode placement
 
 Initial electrode placement followed the international 10–20 system, with the recording electrode positioned at **O1 or O2** over the occipital region, where visual processing predominantly occurs. The approximate electrode locations are shown in the figure below left (Malmivuo & Plonsey, 1995). The reference electrode was placed over the mastoid process behind the ear. This configuration produced good-quality SSVEP recordings and allowed different stimulation frequencies to be detected with 100% accuracy when each frequency was presented individually.
 
