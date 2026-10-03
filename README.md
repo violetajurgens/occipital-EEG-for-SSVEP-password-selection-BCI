@@ -30,11 +30,15 @@ The 10 Hz stimulus therefore follows a six-frame sequence consisting of **three 
 
 After an initial warm-up period, frame intervals are measured over a series of screen refreshes and the median stable frame interval is used to calculate the actual refresh frequency. The program requires the measured refresh rate to fall between 58 and 62 Hz and terminates the experiment if more than 2% of the measured frames are substantially delayed. The actual stimulation frequencies are then calculated from the measured refresh rate. For every screen frame, the program uses a shared integer frame counter to determine the state of each stimulus. 
 
+<img width="500" height="255" alt="Screenshot 2026-10-03 213206" src="https://github.com/user-attachments/assets/ea09b5b6-a512-4fdc-b1ba-b8d09bd0999d" />
+
 The current frame number is divided modulo the number of frames in the corresponding flicker cycle. This determines whether the stimulus should be displayed as white or black during that particular monitor refresh. The program first draws the required state into the next display buffer and then calls `win.flip()`. With vertical-blank synchronization enabled, PsychoPy presents the prepared frame at the next monitor refresh. The final calibration uses **two simultaneously flickering targets**, rather than presenting the frequencies sequentially. 
 
 The left target represents **NEXT and flickers at approximately 10 Hz**, while the right target represents **SELECT and flickers at approximately 12 Hz**. Before every trial, a yellow cue indicates which target the participant should attend to. Once stimulation begins, the cue disappears and **both targets flicker simultaneously**, while the **participant continues looking directly at the white fixation dot in the instructed target**. The classifier must identify which stimulus is being attended to while another frequency is simultaneously present.
 
 Calibration consists of **30 trials: 15 NEXT trials and 15 SELECT trials**. Their order is randomized in balanced blocks. Each trial begins with a 0.75 s cue period, followed by **3.5 s of simultaneous flickering** and a 1 s REST period. The 3.5 s stimulation interval contains a 0.25 s initial settling period, a 3.0 s interval intended for EEG analysis, and a final 0.25 s guard period. This prevents the classifier from relying immediately on the transition into the stimulus and provides a consistent three-second SSVEP segment for subsequent analysis.
+
+https://github.com/user-attachments/assets/7ab12f99-e23c-48a0-9db6-fb548bffe1ab
 
 Accurate timing of the visual stimulus was particularly important because earlier experiments performed in windowed mode produced measured frame intervals of approximately **20–28 ms**, rather than the approximately 16.67 ms expected from a stable 60 Hz display. **In windowed presentation, additional buffering and processing by the operating system's desktop compositor can influence when a prepared image actually becomes visible**. PsychoPy also specifically recommends true full-screen operation for experiments requiring accurate frame timing.
 
