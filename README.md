@@ -45,7 +45,7 @@ The calibration program evaluates whether the recorded EEG can distinguish betwe
 ## Real-time control of the password selection BCI
 
 
-**Reference**
+**References**
 
 Hamidi Shishavan, H., Roy, R., Golzari, K., Singla, A., Zalozhin, D., Lohan, D., Farooq, M., Dede, E. M., & Kim, I. (2024). Optimization of stimulus properties for SSVEP-based BMI system with a heads-up display to control in-vehicle features. *PLOS ONE, 19*(9), e0308506. https://doi.org/10.1371/journal.pone.0308506
 
