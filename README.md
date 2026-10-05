@@ -1,5 +1,7 @@
 # Single-channel occipital EEG for a password selection BCI based on steady-state visual evoked potentials (SSVEP)
 
+This project presents a single-channel steady-state visual evoked potential (SSVEP) brain–computer interface that converts visually evoked EEG activity into real-time commands for numeric password selection. The complete system was developed from the ground up, including EEG acquisition, electrode-placement testing, frame-accurate visual stimulation, EEG–stimulus synchronization, signal processing, CCA-based classification, and the final real-time interface. Using a single occipital EEG channel, the system distinguishes between two simultaneously flickering targets representing NEXT and SELECT, achieving over 90% classification accuracy during successful calibration before being used for real-time password entry.
+
 ## Required components and downloads
 
 * **EXG Pill by Upside Down Labs**. An instrumentation amplifier designed for recording small biopotential signals such as EEG, EMG, and ECG.
