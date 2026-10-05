@@ -46,6 +46,9 @@ The figure above shows the classification results from one successful two-target
 
 ## Real-time control of the password selection BCI
 
+The real-time application uses two simultaneously presented SSVEP targets to control numeric password entry: **NEXT** advances the highlighted digit from 0–9, while **SELECT** enters the currently highlighted digit into the password. The two targets flicker at approximately **10 Hz and 12 Hz**, generated using exact frame counting on a 60 Hz display. During each 3.5 s decision epoch, EEG is continuously recorded from the selected occipital channel through the Arduino/CHORDS acquisition system. The signal is aligned with the stimulus timing, band-pass filtered from **4–30 Hz**, and a 3.0 s analysis window is classified using **CCA against sinusoidal reference signals at each stimulus frequency and its second harmonic**. The command with the higher CCA score is executed immediately: NEXT moves the highlighted digit and SELECT adds it to the password. The program also performs real-time quality checks before accepting a decision. Epochs are rejected and repeated if EEG packets are missing, the serial connection is interrupted, stimulus frame timing is unstable, the EEG signal is clipped or nearly flat, or EEG–stimulus timing cannot be aligned reliably. This prevents unreliable recording periods from directly changing the entered password.
+
+https://github.com/user-attachments/assets/e5a91daf-594a-47ae-ad75-4e61582cf75f
 
 **References**
 
