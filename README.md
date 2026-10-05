@@ -6,14 +6,6 @@ This project presents a single-channel steady-state visual evoked potential (SSV
 
 Example SSVEP recording and spectral response. The upper panels show the raw acquired signal and the same EEG after 4–30 Hz band-pass filtering. The lower panels show single-sided amplitude spectra from representative NEXT and SELECT trials. When attending to the NEXT stimulus, the dominant response occurs at approximately 10 Hz, whereas attending to SELECT produces a dominant response at approximately 12 Hz. Responses are also visible near the corresponding second harmonics at approximately 20 Hz and 24 Hz. Red lines indicate the attended stimulus frequency and its second harmonic, while blue lines indicate the competing stimulus. The spectral separation between the two conditions demonstrates that the single-channel occipital recording contains sufficient frequency-specific information for SSVEP classification.
 
-## Required components and downloads
-
-* **EXG Pill by Upside Down Labs**. An instrumentation amplifier designed for recording small biopotential signals such as EEG, EMG, and ECG.
-
-* **2x Arduino / Raspberry Pi / compatible microcontroller board**. One board is used to acquire the analog EEG signal from the EXG Pill and transmit the data to the computer. The second board is used to control the LEDs that generate the flickering visual stimuli.
-
-* **PsychoPy**. Used as the central software environment for the entire SSVEP BCI. It generates the frame-locked visual stimuli, controls the calibration procedure, acquires EEG data through the serial connection, records stimulus and experimental markers, and runs the real-time BCI interface. It is used because it provides precise synchronization with the monitor refresh cycle while also allowing everything else to be handled within a single program.
-
 ## Electrode placement
 
 Initial electrode placement followed the international 10–20 system, with the recording electrode positioned at **O1 or O2** over the occipital region, where visual processing predominantly occurs. The approximate electrode locations are shown in the figure below left (Malmivuo & Plonsey, 1995). The reference electrode was placed over the mastoid process behind the ear. This configuration produced good-quality SSVEP recordings and allowed different stimulation frequencies to be detected with 100% accuracy when each frequency was presented individually. However, classification performance decreased substantially when several flickering stimuli were displayed simultaneously. Several modifications to the visual stimulus were tested, including reducing the number of stimuli, increasing the distance between them, simplifying the screen layout, and comparing simultaneous stimulation with a more concentrated paradigm in which attention was directed toward one stimulus while the other stimuli continued flickering. Despite these modifications, classification accuracy did not exceed 50%.
