@@ -2,6 +2,10 @@
 
 This project presents a single-channel steady-state visual evoked potential (SSVEP) brain–computer interface that converts visually evoked EEG activity into real-time commands for numeric password selection. The complete system was developed from the ground up, including EEG acquisition, electrode-placement testing, frame-accurate visual stimulation, EEG–stimulus synchronization, signal processing, CCA-based classification, and the final real-time interface. Using a single occipital EEG channel, the system distinguishes between two simultaneously flickering targets representing NEXT and SELECT, achieving over 90% classification accuracy during successful calibration before being used for real-time password entry.
 
+<img width="900" height="560" alt="Figure_1" src="https://github.com/user-attachments/assets/f0bb23d9-d240-4799-8666-907b7df3c789" />
+
+Example SSVEP recording and spectral response. The upper panels show the raw acquired signal and the same EEG after 4–30 Hz band-pass filtering. The lower panels show single-sided amplitude spectra from representative NEXT and SELECT trials. When attending to the NEXT stimulus, the dominant response occurs at approximately 10 Hz, whereas attending to SELECT produces a dominant response at approximately 12 Hz. Responses are also visible near the corresponding second harmonics at approximately 20 Hz and 24 Hz. Red lines indicate the attended stimulus frequency and its second harmonic, while blue lines indicate the competing stimulus. The spectral separation between the two conditions demonstrates that the single-channel occipital recording contains sufficient frequency-specific information for SSVEP classification.
+
 ## Required components and downloads
 
 * **EXG Pill by Upside Down Labs**. An instrumentation amplifier designed for recording small biopotential signals such as EEG, EMG, and ECG.
